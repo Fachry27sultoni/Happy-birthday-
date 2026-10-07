@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday Amira 🎂</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+
+      background:
+        radial-gradient(circle at 20% 20%, #ffbfd5 0, transparent 28%),
+        radial-gradient(circle at 85% 80%, #c9b8ff 0, transparent 30%),
+        linear-gradient(135deg, #211522, #30203b, #1d1728);
+
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      animation: masuk 1s ease;
+    }
+
+    .top-text {
+      color: #ffc0d7;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 11vw, 65px);
+      margin-bottom: 10px;
+
+      background: linear-gradient(
+        90deg,
+        #ffffff,
+        #ffc0d7,
+        #d5c7ff
+      );
+
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      color: #d8d0dc;
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+
+    .card {
+      padding: 32px 25px;
+      border-radius: 25px;
+
+      background: rgba(255, 255, 255, .09);
+      border: 1px solid rgba(255, 255, 255, .15);
+
+      backdrop-filter: blur(15px);
+
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, .3);
+    }
+
+    .cake {
+      font-size: 68px;
+      display: inline-block;
+      margin-bottom: 12px;
+
+      animation: goyang 2s ease-in-out infinite;
+    }
+
+    .card h2 {
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    .message {
+      color: #e5dde7;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .message .pink {
+      color: #ffb3ce;
+      font-weight: bold;
+    }
+
+    .button {
+      margin-top: 25px;
+
+      padding: 13px 25px;
+
+      border: none;
+      border-radius: 50px;
+
+      background: linear-gradient(
+        135deg,
+        #ff76ad,
+        #a887ff
+      );
+
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition: .3s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(255, 118, 173, .3);
+    }
+
+    .surprise {
+      max-height: 0;
+      overflow: hidden;
+
+      opacity: 0;
+
+      transition: .7s ease;
+    }
+
+    .surprise.show {
+      max-height: 300px;
+      opacity: 1;
+      margin-top: 25px;
+    }
+
+    .surprise-content {
+      padding-top: 22px;
+
+      border-top:
+        1px solid rgba(255, 255, 255, .12);
+
+      color: #e7dfe7;
+
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .footer {
+      margin-top: 22px;
+      color: #958b9a;
+      font-size: 12px;
+    }
+
+    /* floating hearts */
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+
+      color: #ff9fbe;
+
+      pointer-events: none;
+
+      animation:
+        naik 6s linear forwards;
+
+      opacity: .65;
+    }
+
+    /* confetti */
+
+    .confetti {
+      position: fixed;
+
+      top: -10px;
+
+      width: 8px;
+      height: 8px;
+
+      pointer-events: none;
+
+      animation:
+        jatuh 3s linear forwards;
+    }
+
+    @keyframes masuk {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes goyang {
+      0%, 100% {
+        transform: rotate(-5deg);
+      }
+
+      50% {
+        transform: rotate(5deg) translateY(-5px);
+      }
+    }
+
+    @keyframes naik {
+      from {
+        transform:
+          translateY(0)
+          rotate(0deg);
+
+        opacity: 0;
+      }
+
+      15% {
+        opacity: .7;
+      }
+
+      to {
+        transform:
+          translateY(-110vh)
+          rotate(360deg);
+
+        opacity: 0;
+      }
+    }
+
+    @keyframes jatuh {
+      from {
+        transform:
+          translateY(0)
+          rotate(0deg);
+
+        opacity: 1;
+      }
+
+      to {
+        transform:
+          translateY(110vh)
+          rotate(720deg);
+
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      body {
+        padding: 18px;
+      }
+
+      .card {
+        padding: 28px 20px;
+      }
+
+      .message {
+        font-size: 14px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="top-text">
+      A little celebration for
+    </div>
+
+    <h1>Amira</h1>
+
+    <div class="subtitle">
+      Hari ini hari spesial kamu 🎉
+    </div>
+
+
+    <div class="card">
+
+      <div class="cake">
+        🎂
+      </div>
+
+      <h2>
+        Happy Birthday! 🥳
+      </h2>
+
+      <div class="message">
+
+        <p>
+          Selamat ulang tahun,
+          <span class="pink">Amira!</span>
+        </p>
+
+        <br>
+
+        <p>
+          Semoga di umur yang baru ini kamu selalu
+          diberi kesehatan, kebahagiaan, dan banyak
+          hal baik.
+        </p>
+
+        <br>
+
+        <p>
+          Semoga apa yang kamu cita-citakan bisa
+          tercapai satu per satu dan semua urusan
+          kamu dipermudah.
+        </p>
+
+        <br>
+
+        <p>
+          Semoga tahun ini punya banyak cerita seru,
+          banyak hal yang bikin senyum, dan tentunya
+          lebih banyak momen menyenangkan.
+        </p>
+
+        <br>
+
+        <p>
+          <span class="pink">
+            Happy birthday, Amira! 🤍
+          </span>
+        </p>
+
+      </div>
+
+
+      <button
+        class="button"
+        onclick="bukaPesan()"
+      >
+        Buka pesan kecil 💌
+      </button>
+
+
+      <div
+        class="surprise"
+        id="surprise"
+      >
+
+        <div class="surprise-content">
+
+          Oiya, ada satu pesan lagi.
+
+          <br><br>
+
+          Semoga semua hal baik yang kamu kasih
+          ke orang lain bisa balik lagi ke kamu.
+
+          <br><br>
+
+          Jangan lupa bahagia hari ini yaa.
+          Nikmatin harinya dan have fun! 🎉
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer">
+      made with good wishes ♡
+    </div>
+
+  </div>
+
+
+  <script>
+
+    function bukaPesan() {
+
+      const surprise =
+        document.getElementById("surprise");
+
+      surprise.classList.toggle("show");
+
+      if (surprise.classList.contains("show")) {
+        confetti();
+      }
+
+    }
+
+
+    function createHeart() {
+
+      const heart =
+        document.createElement("div");
+
+      heart.className = "heart";
+
+      heart.innerHTML = "♡";
+
+      heart.style.left =
+        Math.random() * 100 + "vw";
+
+      heart.style.fontSize =
+        (Math.random() * 10 + 12) + "px";
+
+      heart.style.animationDuration =
+        (Math.random() * 3 + 5) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+
+    }
+
+
+    function confetti() {
+
+      for (let i = 0; i < 70; i++) {
+
+        const piece =
+          document.createElement("div");
+
+        piece.className = "confetti";
+
+        piece.style.left =
+          Math.random() * 100 + "vw";
+
+        piece.style.background =
+          [
+            "#ff78ad",
+            "#ffd166",
+            "#a887ff",
+            "#ffffff",
+            "#70d6ff"
+          ][
+            Math.floor(Math.random() * 5)
+          ];
+
+        piece.style.animationDuration =
+          (Math.random() * 2 + 2) + "s";
+
+        piece.style.width =
+          (Math.random() * 6 + 5) + "px";
+
+        piece.style.height =
+          (Math.random() * 6 + 5) + "px";
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+          piece.remove();
+        }, 4000);
+
+      }
+
+    }
+
+
+    setInterval(createHeart, 1200);
+
+  </script>
+
+</body>
+</html>
